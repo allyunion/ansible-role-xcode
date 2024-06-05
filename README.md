@@ -14,8 +14,6 @@ The Xcode installation requires a pre-downloaded Xcode xip file on the target ma
 
 A UI session is also required. This means the user you are using to execute the role must be logged on to the OSX machine.
 
-The role expects [Spotlight][spotlight] to be enabled. It uses Spotlight search to check whether Xcode is already installed.
-
 ## Role Variables
 
 Role variables and their default values are listed below.
@@ -72,4 +70,3 @@ This role was created in 2019 by [MacStadium, Inc][macstadium].
 [link-license]: https://raw.githubusercontent.com/macstadium/ansible-role-xcode/master/LICENSE
 [xcode]: https://developer.apple.com/xcode/
 [apple-downloads]: https://developer.apple.com/download/more/
-[spotlight]: https://support.apple.com/en-us/HT204014

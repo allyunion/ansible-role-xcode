@@ -1,11 +1,11 @@
 - name: Check if Xcode is installed
-  command: mdfind -onlyin /Applications "kMDItemCFBundleIdentifier == 'com.apple.dt.Xcode'"
+  command: pkgutil --pkgs=.\+Xcode.\+
   register: xcode_app
   changed_when: false
 
 - name: Register xcode_installed
   set_fact:
-    xcode_installed: "{{ xcode_app.stdout.find('Xcode') != -1 }}"
+    xcode_installed: "{{ xcode_app.rc == 0 }}"
 
 - name: Get Installed Xcode version
   shell: xcodebuild -version | head -n1 | cut -d " " -f 2
